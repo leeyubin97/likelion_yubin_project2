@@ -1,0 +1,22 @@
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<h1 class="text-center"><strong> 안녕하세요, 여기서 글자를 세면 됩니다. </strong></h1>
+<br>
+<div style = "padding: 5px 300px 2px 380px;">
+<a href="{% url 'about' %}">ABOUT</a>
+<br>
+<br>
+<form action="{% url 'result' %}">
+    <textarea cols="80" rows="15" name="fulltext"></textarea>
+    <br>
+    <br>
+    <input type="submit" class = "btn btn-info" value="Count!">
+</form>
+</div>

@@ -1,0 +1,30 @@
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<h3 class="text-center"><strong> 당신이 입력한 텍스트는 {{total}} 개의 단어로 구성되어 있습니다.</strong></h3>
+<br>
+<div style = "padding: 5px 300px 2px 380px;">
+<a href="{% url 'home'%}">다시 하기</a>
+<br>
+<br>
+<h4> 입력한 텍스트는 : </h4>
+{{full}}
+<br>
+<br>
+<h4> 반복된 단어 카운트 : </h4>
+{% for word, howmany in dictionary %}
+{{word}} : {{howmany}}
+<br>
+{% endfor %}
+<br>
+<h4> 텍스트 바이트 개수(공백 포함) : {{alphabet}} </h4>
+</div>
+
+
+
